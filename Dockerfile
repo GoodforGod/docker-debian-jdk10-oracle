@@ -23,7 +23,7 @@ ENV JAVA_HOME="/opt/java/${JAVA_TYPE}-${JAVA_FULL_VERSION}" \
 	JAVA_TAR="${JAVA_TYPE}-${JAVA_FULL_VERSION}_linux-x64_bin.tar.gz"
 
 # Download oracle jdk -> extract it -> cleanup -> add app user & group
-# You can use USER 'app' for you app
+# You can use USER called 'app' for your application
 RUN cd /tmp \
 	&& apt-get update \
 	&& apt-get install -y wget \
