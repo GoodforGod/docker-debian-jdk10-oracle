@@ -33,7 +33,6 @@ RUN cd /tmp \
 	&& tar -xzf $JAVA_TAR -C /opt/java \
 	&& ln -s $JAVA_HOME $JAVA_HOME/bin/* /usr/bin/ \
 	&& rm -rf $JAVA_HOME/lib/src.zip \
-	$JAVA_HOME/lib/missioncontrol \
 	$JAVA_HOME/lib/*javafx* \
 	$JAVA_HOME/lib/*jfx* \
 	$JAVA_HOME/lib/*awt* \
