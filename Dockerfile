@@ -22,7 +22,7 @@ ENV JAVA_FULL_VERSION="${JAVA_MAJOR_VERSION}.${JAVA_MINOR_VERSION}.${JAVA_UPDATE
 ENV JAVA_HOME="/opt/java/${JAVA_TYPE}-${JAVA_FULL_VERSION}" \
 	JAVA_TAR="${JAVA_TYPE}-${JAVA_FULL_VERSION}_linux-x64_bin.tar.gz"
 
-# Download oracle jre -> extract it -> add app user & group -> cleanup
+# Download oracle jdk -> extract it -> cleanup -> add app user & group
 # You can use USER 'app' for you app
 RUN cd /tmp \
 	&& apt-get update \
@@ -32,7 +32,7 @@ RUN cd /tmp \
 	--progress=dot:mega --tries=10 "http://download.oracle.com/otn-pub/java/jdk/${JAVA_FULL_VERSION}+${JAVA_BUILD}/${JAVA_PATH}/${JAVA_TAR}" \
 	&& tar -xzf $JAVA_TAR -C /opt/java \
 	&& ln -s $JAVA_HOME $JAVA_HOME/bin/* /usr/bin/ \
-	&& rm -rf $JAVA_HOME/*src.zip \
+	&& rm -rf $JAVA_HOME/lib/src.zip \
 	$JAVA_HOME/lib/missioncontrol \
 	$JAVA_HOME/lib/*javafx* \
 	$JAVA_HOME/lib/*jfx* \
@@ -47,8 +47,7 @@ RUN cd /tmp \
 	$JAVA_HOME/lib/deploy* \
 	$JAVA_HOME/lib/fonts \
 	$JAVA_HOME/lib/oblique-fonts \
-	$JAVA_HOME/jmods/*javafx* \
-	$JAVA_HOME/jmods/*javaws* \
+	$JAVA_HOME/jmods \
     && apt-get remove -y wget \
     && apt-get clean -y \
     && apt-get autoremove -y \
