@@ -12,9 +12,9 @@ FROM debian:stretch-slim
 ENV LANG=C.UTF-8 \ 
 	JAVA_MAJOR_VERSION=10 \
 	JAVA_MINOR_VERSION=0 \
-	JAVA_UPDATE=1 \
-	JAVA_BUILD=10 \
-	JAVA_PATH=fb4372174a714e6b8c52526dc134031e \
+	JAVA_UPDATE=2 \
+	JAVA_BUILD=13 \
+	JAVA_PATH=19aef61b38124481863b1413dce1855f \
 	JAVA_TYPE=jdk
 
 ENV JAVA_FULL_VERSION="${JAVA_MAJOR_VERSION}.${JAVA_MINOR_VERSION}.${JAVA_UPDATE}"
@@ -22,7 +22,7 @@ ENV JAVA_FULL_VERSION="${JAVA_MAJOR_VERSION}.${JAVA_MINOR_VERSION}.${JAVA_UPDATE
 ENV JAVA_HOME="/opt/java/${JAVA_TYPE}-${JAVA_FULL_VERSION}" \
 	JAVA_TAR="${JAVA_TYPE}-${JAVA_FULL_VERSION}_linux-x64_bin.tar.gz"
 
-# Download oracle jdk -> extract it -> cleanup -> add app user & group
+# Downloading oracle jdk -> extract it -> cleanup -> add app user & group
 # You can use USER called 'app' for your application
 RUN cd /tmp \
 	&& apt-get update \
