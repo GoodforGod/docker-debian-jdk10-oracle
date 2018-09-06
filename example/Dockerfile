@@ -1,4 +1,4 @@
-FROM goodforgod/debian-jdk10-oracle
+FROM goodforgod/debian-jdk10-oracle:sid-mission
 
 COPY helloworld-1.0.0.jar /
 VOLUME /tmp/logs
