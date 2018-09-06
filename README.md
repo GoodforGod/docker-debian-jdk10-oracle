@@ -8,7 +8,7 @@ Image contains cleaned [Oracle JDK 10.0.2](http://www.oracle.com/technetwork/jav
 JDK is provided without *desktop, sources* and other unnecessary stuff except JVM and javac. Some tags have mission control included as well (check image section below).
 Image have all *JVM* parts to run and compile *Java applications* in Docker containers.
 
-There such tags:
+Tags:
 
 #### *lastest* or *stretch*
 * Uses base image [Debian Stretch Slim](https://hub.docker.com/_/debian/) *(55.3MB)*
