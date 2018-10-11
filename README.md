@@ -1,4 +1,8 @@
 # Docker Debian Oracle JDK 10
+[![Docker pulls](https://img.shields.io/docker/pulls/goodforgod/debian-jdk10-oracle.svg)](https://registry.hub.docker.com/v2/repositories/goodforgod/debian-jdk10-oracle/)
+[![Docker Stars](https://img.shields.io/docker/stars/goodforgod/debian-jdk10-oracle.svg)](https://registry.hub.docker.com/v2/repositories/goodforgod/debian-jdk10-oracle/)
+[![Docker Automated build](https://img.shields.io/docker/automated/goodforgod/debian-jdk10-oracle.svg?maxAge=31536000)](https://registry.hub.docker.com/v2/repositories/goodforgod/debian-jdk10-oracle/)
+
 Docker Debian image with Oracle JDK 10.0.2 (305MB)
 
 You must accept the [Oracle Binary Code License Agreement for Java SE](http://www.oracle.com/technetwork/java/javase/terms/license/index.html) to use this image.
@@ -38,4 +42,4 @@ Just add code below in your *Dockerfile* to use start your application as a user
 USER app
 ```
 
-Check [example](https://github.com/GoodforGod/https://github.com/GoodforGod/docker-debian-jre10server-oracle/tree/master/example) folder for *Dockerfile* example of image usage.
+Check [example](https://github.com/GoodforGod/docker-debian-jre10server-oracle/tree/master/example) folder for *Dockerfile* example of image usage.
